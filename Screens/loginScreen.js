@@ -13,12 +13,14 @@ import Icon from 'react-native-vector-icons/Ionicons';
 import useTheme from './useTheme';
 
 
-const LoginScreen = () => {
+const LoginScreen = ({ navigation }) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
   const handleLogin = () => {
+    
     console.log("Login with:", email, password);
+    navigation.navigate('dashboard');
   };
 
   const { isDarkMode, themeStyles, toggleTheme } = useTheme();
@@ -49,8 +51,8 @@ const LoginScreen = () => {
           />
         </View>
         <View style={{backgroundColor:"green", width:"100%",flexDirection:'row',justifyContent:"space-between", paddingLeft:20, paddingRight:20,paddingTop:10}}>
-          <Pressable><Text>Create account</Text></Pressable>
-          <Pressable style={themeStyles.innerText}><Text>
+          <Pressable onPress={() => navigation.navigate('signup')}><Text style={themeStyles.innerText}>Create account</Text></Pressable>
+          <Pressable><Text style={themeStyles.innerText}>
             Forgot your password? <Icon name="arrow-forward-outline" size={20} color={themeStyles.iconColor} /></Text>
           </Pressable>
         </View>
