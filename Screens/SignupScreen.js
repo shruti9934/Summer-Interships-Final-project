@@ -74,10 +74,10 @@ const SignupScreen = () => {
         <View><Text style={themeStyles.SignupBottomText}>Or signUp with Social Account</Text></View>
         <View style={themeStyles.SocialSignupButton}>
           <Pressable style={themeStyles.SocialButton}>
-          <Image source={require("../assets/google.png")} style={{height:50,width:50}} />
+          <Image source={require("../assets/google.png")} style={{height:30,width:30}} />
           </Pressable>
           <Pressable style={themeStyles.SocialButton}>
-          <Image source={require("../assets/fecebook.png")} style={{height:50,width:50}} />
+          <Image source={require("../assets/fecebook.png")} style={{height:30,width:30}} />
           </Pressable>
         </View>
         <Button title="Toggle Mode" onPress={toggleTheme} />

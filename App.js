@@ -2,6 +2,7 @@ import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
 import SignupScreen from './Screens/SignupScreen';
 import LoginScreen from './Screens/loginScreen';
+import SplashScreen from './Screens/splashScreen/splashScreen';
 export default function App() {
   return (
     <View style={styles.container}>

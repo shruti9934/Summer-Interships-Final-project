@@ -28,6 +28,8 @@ const LoginScreen = () => {
       <Text style={themeStyles.headText}>Login</Text>
 
       <View style={themeStyles.inputContainer}>
+        <View style={themeStyles.inputContainer}>
+        
         <View style={themeStyles.textBox}>
           <Text style={themeStyles.innerText}>Email</Text>
           <TextInput
@@ -46,11 +48,12 @@ const LoginScreen = () => {
             secureTextEntry
           />
         </View>
-
-        <View>
-          <Text style={themeStyles.innerText}>
-            Forgot your password? <Icon name="arrow-forward-outline" size={20} color={themeStyles.iconColor} />
-          </Text>
+        <View style={{backgroundColor:"green", width:"100%",flexDirection:'row',justifyContent:"space-between", paddingLeft:20, paddingRight:20,paddingTop:10}}>
+          <Pressable><Text>Create account</Text></Pressable>
+          <Pressable style={themeStyles.innerText}><Text>
+            Forgot your password? <Icon name="arrow-forward-outline" size={20} color={themeStyles.iconColor} /></Text>
+          </Pressable>
+        </View>
         </View>
       </View>
 
@@ -68,11 +71,11 @@ const LoginScreen = () => {
         </View>
         <View style={themeStyles.SocialSignupButton}>
           <Pressable style={themeStyles.SocialButton}>
-          <Image source={require("../assets/fecebook.png")} style={{height:50,width:50}} />
+          <Image source={require("../assets/fecebook.png")} style={{height:30,width:30}} />
             
           </Pressable>
           <Pressable style={themeStyles.SocialButton}>
-          <Image source={require("../assets/google.png")} style={{height:50,width:50}} />
+          <Image source={require("../assets/google.png")} style={{height:30,width:30}} />
           </Pressable>
         </View>
         <Button title="Toggle Mode" onPress={toggleTheme} />
